@@ -10,9 +10,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { AboutComponent } from './components/about/about.component';
 import { Page404Component } from './components/page404/page404.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { VisitorsComponent } from './components/visitors/visitors.component';
 
 @NgModule({
-    declarations: [LayoutComponent, HeaderComponent, FooterComponent, MenuComponent, HomeComponent, ProductsComponent, AboutComponent, Page404Component, LogoComponent],
+    declarations: [LayoutComponent, HeaderComponent, FooterComponent, MenuComponent, HomeComponent, ProductsComponent, AboutComponent, Page404Component, LogoComponent, VisitorsComponent],
     imports: [BrowserModule, AppRoutingModule],
     exports: [],
     providers: [],
