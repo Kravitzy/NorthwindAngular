@@ -1,0 +1,10 @@
+a {
+    display: block;
+    margin: 10px;
+}
+
+.active-link {
+    color: magenta;
+    font-weight: bold;
+    font-style: arial;
+}
