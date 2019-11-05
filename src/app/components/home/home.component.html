@@ -1,4 +1,16 @@
 
-<img src="/assets/images/home.png">
+<app-heading>Best Products Site Ever</app-heading>
+
+<img #imageSrc src="/assets/images/home.png" [width]="imageWidth" (click)="displayDetails($event)">
+
+<div>
+    <button (click)="incSize()">&uarr;</button>
+    <button (click)="resetSize()">&harr;</button>
+    <button (click)="decSize()">&darr;</button>
+    <hr>
+    {{imageWidth}} x {{imageSrc.height}}
+    <hr>
+    <label>{{imageWidth}}</label>
+</div>
 
 
