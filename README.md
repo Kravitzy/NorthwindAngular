@@ -20,7 +20,7 @@ command to install angular: use `npm i -g @angular/cli`.
     01. Interpolation.
     02. Property Binding.
     03. Event Binding.
-    04. Two-Wat Binding.
+    04. Two-Way Binding.
 02. Template Refrence Variable.
 03. Directives-
     01. Attribute Directive.

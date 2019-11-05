@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { SeasonService} from '../../services/season.service'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [SeasonService]
 })
 export class HomeComponent implements OnInit {
 
@@ -13,10 +15,16 @@ export class HomeComponent implements OnInit {
     public maxPrice: number;
 
 
-  constructor() { }
+  constructor(private seasonSrv: SeasonService) { }
 
   ngOnInit() {
     this.imageWidth = 300;
+    if (this.seasonSrv.isSummerNow()) {
+        alert("Winter is coming..";        
+    }
+    else{
+        alert("winter is here!");
+    }
   }
 
   public incSize():void{
