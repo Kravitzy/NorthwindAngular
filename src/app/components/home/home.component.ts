@@ -13,19 +13,19 @@ export class HomeComponent implements OnInit {
     public currentDate : Date;
     public imageWidth: number;
     public maxPrice: number;
+    private winter: boolean;
 
 
   constructor(private seasonSrv: SeasonService) { }
 
+
+
   ngOnInit() {
     this.imageWidth = 300;
-    if (this.seasonSrv.isSummerNow()) {
-        alert("Winter is coming..";        
-    }
-    else{
-        alert("winter is here!");
-    }
+    this.winter = this.seasonSrv.isSummerNow();
   }
+  
+  
 
   public incSize():void{
     this.imageWidth += 10;
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   public displayDetails(event: MouseEvent):void{
-      alert("width: " + event.srcElement.width + " height: " + event.srcElement.height);
+    //   alert("width: " + event.srcElement.width + " height: " + event.srcElement.height);
   }
 
 

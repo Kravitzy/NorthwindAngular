@@ -30,3 +30,4 @@ command to install angular: use `npm i -g @angular/cli`.
     01. Component Level.
     02. Module Level.
     03. App Level.
+06. Models
