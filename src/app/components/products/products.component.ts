@@ -11,7 +11,7 @@ export class ProductsComponent implements OnInit {
 
     public allProducts : Product[];
 
-    
+
 
 
   constructor(private prodService: ProductsService) { }
@@ -21,6 +21,10 @@ export class ProductsComponent implements OnInit {
 
     this.prodService.getAllProductsFromServer()
         .subscribe(products => this.allProducts = products, err => alert(err.message));
+  }
+
+  onMouseOut(event):void{
+        console.log(event)
   }
 
 }
