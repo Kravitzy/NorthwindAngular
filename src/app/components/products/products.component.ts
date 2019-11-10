@@ -9,12 +9,15 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductsComponent implements OnInit {
 
-    public products : Product[];
+    public allProducts : Product[];
 
   constructor(private prodService: ProductsService) { }
 
   ngOnInit() {
-    this.products = this.prodService.getAllProducts();
+    // this.allProducts = this.prodService.getAllProducts();
+
+    this.prodService.getAllProductsFromServer()
+        .subscribe(products => this.allProducts = products, err => alert(err.message));
   }
 
 }

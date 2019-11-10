@@ -8,11 +8,15 @@
             <th>Name</th>
             <th>Price</th>
             <th>Stock</th>
+            <th>Picture</th>
         </tr>
-        <tr *ngFor="let prod of products">
+        <tr *ngFor="let prod of allProducts">
             <td>{{prod.name}}</td>
             <td>{{prod.price}}</td>
             <td>{{prod.stock}}</td>
+            <td><app-thumbnail imageSource="/assets/images/products/{{prod.id}}.jpg" imageWidth="100" imageHeight="80"></app-thumbnail></td>
         </tr>
     </table>
 </div>
+
+<img src="" alt="">

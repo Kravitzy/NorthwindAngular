@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     public currentDate : Date;
     public imageWidth: number;
     public maxPrice: number;
-    private winter: boolean;
+    public winter: boolean;
 
 
   constructor(private seasonSrv: SeasonService) { }

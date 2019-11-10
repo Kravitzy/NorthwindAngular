@@ -39,4 +39,6 @@ command to install angular: use `npm i -g @angular/cli`.
     `public get():Promise<Products[]>{  }
 03. await
 04. observable
-05. httpClient
+05. HttpClient
+06. Image Source of products change dynamcily within list
+07. mouseenter child parent event
