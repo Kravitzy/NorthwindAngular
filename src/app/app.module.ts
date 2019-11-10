@@ -12,10 +12,11 @@ import { Page404Component } from './components/page404/page404.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { VisitorsComponent } from './components/visitors/visitors.component';
 import { HeadingComponent } from './components/heading/heading.component';
+import { HttpClient} from '@angular/common/http'
 
 @NgModule({
     declarations: [LayoutComponent, HeaderComponent, FooterComponent, MenuComponent, HomeComponent, ProductsComponent, AboutComponent, Page404Component, LogoComponent, VisitorsComponent, HeadingComponent],
-    imports: [BrowserModule, AppRoutingModule],
+    imports: [BrowserModule, AppRoutingModule, HttpClient],
     exports: [],
     providers: [],
     bootstrap: [LayoutComponent]

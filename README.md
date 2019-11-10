@@ -31,3 +31,12 @@ command to install angular: use `npm i -g @angular/cli`.
     02. Module Level.
     03. App Level.
 06. Models
+
+## Day 03
+01. callback function
+    `this.prodService.get(products => this.products = products, err => alert(err.message));`
+02. promise
+    `public get():Promise<Products[]>{  }
+03. await
+04. observable
+05. httpClient

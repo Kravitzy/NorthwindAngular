@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../models/product'
+import { Product } from '../models/product';
+import { HttpClient} from "@angular/common/http";
 
 @Injectable({
     providedIn: 'root'
 })
 export class ProductsService {
     
-    constructor() { }
+    // HttpClient can request data from a remote server, get the response post,put,delete
+    constructor(private http: HttpClient) { }
 
     public getAllProducts(): Product[] {
         const products: Product[] = [];
@@ -17,4 +19,6 @@ export class ProductsService {
         products.push(new Product(5, "Mango", 8, 500));
         return products;
     }
+
+    
 }
