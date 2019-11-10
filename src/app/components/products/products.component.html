@@ -14,9 +14,17 @@
             <td>{{prod.name}}</td>
             <td>{{prod.price}}</td>
             <td>{{prod.stock}}</td>
-            <td><app-thumbnail imageSource="/assets/images/products/{{prod.id}}.jpg" imageWidth="100" imageHeight="80"></app-thumbnail></td>
+            <td>
+                <app-thumbnail 
+                imageSource="/assets/images/products/{{prod.id}}.jpg" 
+                imageWidth="100" 
+                imageHeight="80"
+                (mouseEnter)="preview.src=$event"
+                (mouseOut)="preview.src">
+                </app-thumbnail>
+            </td>
         </tr>
     </table>
 </div>
 
-<img src="" alt="">
+<img #preview> 

@@ -36,9 +36,8 @@ command to install angular: use `npm i -g @angular/cli`.
 01. callback function
     `this.prodService.get(products => this.products = products, err => alert(err.message));`
 02. promise
-    `public get():Promise<Products[]>{  }
-03. await
+03. await; async
 04. observable
 05. HttpClient
 06. Image Source of products change dynamcily within list
-07. mouseenter child parent event
+07. mouseenter child parent event @Output and EventEmitter

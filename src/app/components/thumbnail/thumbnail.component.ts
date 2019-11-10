@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-thumbnail',
@@ -14,16 +14,24 @@ export class ThumbnailComponent implements OnInit {
     @Input()    
     public imageHeight: string;
 
+    @Output() // חשיפה החוצה מה-Child ל-Parent
+    public mouseEnter = new EventEmitter<string>(); // אוביקט שמדווח אירוע
+    public onMouseEnter(): void {
+        this.mouseEnter.emit(this.imageSource); // Raising and Event
+    }
+
+    @Output() // חשיפה החוצה מה-Child ל-Parent
+    public mouseOut = new EventEmitter<string>(); // אוביקט שמדווח אירוע
+    public onMouseOut(): void {
+        this.mouseEnter.emit(); // Raising and Event
+    }
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  /**
-   * onMouseEnter
-   */
-  public onMouseEnter(): void {
-      alert("test");
-  }
+
+
 
 }
