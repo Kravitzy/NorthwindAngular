@@ -1,10 +1,9 @@
 export class Product {
 
         public constructor(
-            private id: number,
-            private name: string,
-            private price: number,
-            private stock: number){
-
+            public id: number,
+            public name: string,
+            public price: number,
+            public stock: number){
         };
 }

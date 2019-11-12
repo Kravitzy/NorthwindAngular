@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeasonService} from '../../services/season.service'
+import { Title }     from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -16,11 +17,13 @@ export class HomeComponent implements OnInit {
     public winter: boolean;
 
 
-  constructor(private seasonSrv: SeasonService) { }
+  constructor(private seasonSrv: SeasonService,
+                private titleService: Title ) { }
 
 
 
   ngOnInit() {
+    this.titleService.setTitle("Home Page");
     this.imageWidth = 300;
     this.winter = this.seasonSrv.isSummerNow();
   }

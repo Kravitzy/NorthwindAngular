@@ -1,6 +1,7 @@
 <p>products works!</p>
 
 
+<a routerLink="/products/new">Add new Product</a>
 
 <div>
     <table>
@@ -11,20 +12,18 @@
             <th>Picture</th>
         </tr>
         <tr *ngFor="let prod of allProducts">
-            <td>{{prod.name}}</td>
-            <td>{{prod.price}}</td>
+            <td>
+                <a routerLink="/products/{{prod.id}}">{{prod.name}}</a>
+            </td>
+            <td>{{prod.price | currency:"ILS"}}</td>
             <td>{{prod.stock}}</td>
             <td>
-                <app-thumbnail 
-                imageSource="/assets/images/products/{{prod.id}}.jpg" 
-                imageWidth="100" 
-                imageHeight="80"
-                (mouseEnter)="preview.src=$event"
-                (mouseOut)="onMouseOut()">
+                <app-thumbnail imageSource="/assets/images/products/{{prod.id}}.jpg" imageWidth="100" imageHeight="80"
+                    (mouseEnter)="preview.src=$event" (mouseOut)="onMouseOut()">
                 </app-thumbnail>
             </td>
         </tr>
     </table>
 </div>
 
-<img #preview> 
+<img #preview>

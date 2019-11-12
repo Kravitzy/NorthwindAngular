@@ -30,14 +30,18 @@ command to install angular: use `npm i -g @angular/cli`.
     01. Component Level.
     02. Module Level.
     03. App Level.
-06. Models
+06. Models.
 
 ## Day 03
-01. callback function
+01. callback function.
     `this.prodService.get(products => this.products = products, err => alert(err.message));`
-02. promise
-03. await; async
-04. observable
-05. HttpClient
-06. Image Source of products change dynamcily within list
-07. mouseenter child parent event @Output and EventEmitter
+02. promise.
+03. await; async.
+04. observable.
+05. HttpClient.
+06. Image Source of products change dynamcily within list.
+07. mouseenter child parent event @Output and EventEmitter.
+
+## Day 04
+01. Title Service.
+02. Route Parameters.
