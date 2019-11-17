@@ -17,19 +17,19 @@ command to install angular: use `npm i -g @angular/cli`.
 
 ### Topics:
 01. Property binding-
-    01. Interpolation.
-    02. Property Binding.
-    03. Event Binding.
-    04. Two-Way Binding.
+    - Interpolation.
+    - Property Binding.
+    - Event Binding.
+    - Two-Way Binding.
 02. Template Refrence Variable.
 03. Directives-
-    01. Attribute Directive.
-    02. Structural Directive.
+    + Attribute Directive.
+    + Structural Directive.
 04. NgContent
 05. Services
-    01. Component Level.
-    02. Module Level.
-    03. App Level.
+    * Component Level.
+    * Module Level.
+    * App Level.
 06. Models.
 
 ## Day 03
@@ -59,7 +59,7 @@ command to install angular: use `npm i -g @angular/cli`.
     {path: "", component: AdminComponent} // "" is relative to "/"
     `
     `
-    imports: [
+    imports: [ 
     CommonModule,
     RouterModule.forChild(routes)
     `
