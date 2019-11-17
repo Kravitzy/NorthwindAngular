@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
     public imageWidth: number;
     public maxPrice: number;
     public winter: boolean;
+    public itemsForFreeOne: number;
 
 
   constructor(private seasonSrv: SeasonService,
@@ -23,7 +24,8 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
-    this.titleService.setTitle("Home Page");
+    this.itemsForFreeOne = 3;
+    this.titleService.setTitle("Home Page | Northwind");
     this.imageWidth = 300;
     this.winter = this.seasonSrv.isSummerNow();
   }

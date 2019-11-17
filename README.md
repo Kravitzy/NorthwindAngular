@@ -67,14 +67,27 @@ command to install angular: use `npm i -g @angular/cli`.
 ]
 04. Route children:
     `
-    // inner router
+    // inner router  
     {
-        path: "", component: SellersComponent, children: [
-            { path: "retailers", component: RetailersComponent }, // "" is relative to "/"
-            { path: "wholesalers", component: WholeSalersComponent } // "" is relative to "/"
-        ]
+        path: "", component: SellersComponent, children: [  
+            { path: "retailers", component: RetailersComponent }, // "" is relative to "/"  
+            { path: "wholesalers", component: WholeSalersComponent } // "" is relative to "/"  
+        ]  
     }
     `
 05. Shared Module.
     `ng g m modules/shared --flat`
-    
+06. Costum Pipe.
+    `ng g p pipes/zero-symbol -m modules/shared --skipTests`
+    must add to exports in module
+07. Custom Directive.
+    host - tag we want to use directive on.
+    `ng g d directives/colored -m modules/shared --skipTests`
+    * by @HostBinding()
+    * by `onstructor(private elementRef: ElementRef, private renderer: Renderer2)`  
+    `this.renderer.setStyle(this.elementRef.nativeElement, "transition", "color 1s");`
+08. CSS-
+    * `transition: color 1s`
+    * `@keyframes RotateAnimation { {from: transform: rotate(0deg)}, to { transform: rotate(360deg)}} `
+
+

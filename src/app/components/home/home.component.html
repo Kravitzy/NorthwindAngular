@@ -3,6 +3,8 @@
 
 <img #imageSrc src="/assets/images/home.png" [width]="imageWidth" (click)="displayDetails($event)">
 
+<p>Buy items {{itemsForFreeOne | numberToWord }}, get one for free!</p>
+
 <div>
     <button (click)="incSize()">&uarr;</button>
     <button (click)="resetSize()">&harr;</button>

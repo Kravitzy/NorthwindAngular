@@ -16,7 +16,7 @@
                 <a routerLink="/products/{{prod.id}}">{{prod.name}}</a>
             </td>
             <td>{{prod.price | currency:"ILS"}}</td>
-            <td>{{prod.stock}}</td>
+            <td>{{prod.stock | zeroSymbol:"חסר במלאי"}}</td>
             <td>
                 <app-thumbnail imageSource="/assets/images/products/{{prod.id}}.jpg" imageWidth="100" imageHeight="80"
                     (mouseEnter)="preview.src=$event" (mouseOut)="onMouseOut()">
