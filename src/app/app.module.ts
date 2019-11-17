@@ -16,10 +16,28 @@ import { HttpClientModule} from '@angular/common/http';
 import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
+import { FormsModule } from '@angular/forms'
+import { SharedModule } from './modules/shared.module';
+
 
 @NgModule({
-    declarations: [LayoutComponent, HeaderComponent, FooterComponent, MenuComponent, HomeComponent, ProductsComponent, AboutComponent, Page404Component, LogoComponent, VisitorsComponent, HeadingComponent, ThumbnailComponent, ProductDetailsComponent, AddProductComponent],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+    declarations: [LayoutComponent, 
+        HeaderComponent, 
+        FooterComponent, 
+        MenuComponent, 
+        HomeComponent, 
+        ProductsComponent, 
+        AboutComponent, 
+        Page404Component, 
+        LogoComponent, 
+        VisitorsComponent, 
+        HeadingComponent, 
+        ThumbnailComponent, 
+        ProductDetailsComponent, 
+        AddProductComponent,
+
+        ],
+    imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, SharedModule],
     exports: [],
     providers: [Title],
     bootstrap: [LayoutComponent]

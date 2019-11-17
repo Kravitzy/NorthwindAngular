@@ -23,7 +23,7 @@ export class ProductsComponent implements OnInit {
         .subscribe(products => this.allProducts = products, err => alert(err.message));
   }
 
-  onMouseOut(event):void{
+  onMouseOut():void{
         console.log(event)
   }
 

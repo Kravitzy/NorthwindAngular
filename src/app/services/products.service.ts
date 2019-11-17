@@ -24,5 +24,9 @@ export class ProductsService {
     public getAllProductsFromServer():Observable<Product[]> {
         return this.http.get<Product[]>("assets/json/products.json");
     }
+
+    public addNewProductsToServer(product : Product):Observable<Product> {
+        return this.http.post<Product>("http://jsonplaceholder.typicode.com/todos",product);
+    }
     
 }

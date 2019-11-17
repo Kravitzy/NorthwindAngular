@@ -45,3 +45,36 @@ command to install angular: use `npm i -g @angular/cli`.
 ## Day 04
 01. Title Service.
 02. Route Parameters.
+
+## Day 05
+01. Adding Module.
+    `ng g m modules/admin --flat`
+02. Adding Component to new Module.
+    `ng g c components/admin -m modules/admin --skipTests`
+03. Lazy loading for new Module Component:
+    `{path: "admin", loadChildren: "./modules/admin.module#adminModule"}`
+    must add to adminModule:
+    `
+    const routes: Routes = [
+    {path: "", component: AdminComponent} // "" is relative to "/"
+    `
+    `
+    imports: [
+    CommonModule,
+    RouterModule.forChild(routes)
+    `
+  ]
+]
+04. Route children:
+    `
+    // inner router
+    {
+        path: "", component: SellersComponent, children: [
+            { path: "retailers", component: RetailersComponent }, // "" is relative to "/"
+            { path: "wholesalers", component: WholeSalersComponent } // "" is relative to "/"
+        ]
+    }
+    `
+05. Shared Module.
+    `ng g m modules/shared --flat`
+    
