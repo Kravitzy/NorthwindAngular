@@ -5,16 +5,17 @@ import { ZeroSymbolPipe } from '../pipes/zero-symbol.pipe';
 import { ColoredDirective } from '../directives/colored.directive';
 import { NumberToWordPipe } from '../pipes/number-to-word.pipe';
 import { RotateDirective } from '../directives/rotate.directive';
+import { DayDirective } from '../directives/day.directive';
 
 
 // not lazy loading
 
 @NgModule({
-  declarations: [ClockComponent, ZeroSymbolPipe, NumberToWordPipe,ColoredDirective, RotateDirective], // לצורך הכרה פנימית במודול
+  declarations: [ClockComponent, ZeroSymbolPipe, NumberToWordPipe,ColoredDirective, RotateDirective, DayDirective], // לצורך הכרה פנימית במודול
   imports: [
     CommonModule
   ],
   // החצנת רכיב כדי שמודולים אחרים יוכלו להשתמש בו
-  exports: [ClockComponent, ZeroSymbolPipe, NumberToWordPipe, ColoredDirective, RotateDirective] // לצורך החצנה למודולים אחרים
+  exports: [ClockComponent, ZeroSymbolPipe, NumberToWordPipe, ColoredDirective, RotateDirective, DayDirective] // לצורך החצנה למודולים אחרים
 })
 export class SharedModule { }

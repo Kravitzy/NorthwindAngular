@@ -35,7 +35,6 @@ import { SharedModule } from './modules/shared.module';
         ThumbnailComponent, 
         ProductDetailsComponent, 
         AddProductComponent,
-
         ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, SharedModule],
     exports: [],
