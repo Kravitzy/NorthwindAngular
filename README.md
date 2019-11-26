@@ -96,5 +96,11 @@ command to install angular: use `npm i -g @angular/cli`.
     - AppState, Store, ActionType, Action, Dispatch, Reducer
     - `const newObj = { ...objToCopy }` // spread operator - משכפל כל האוביקט לאוביקט חדש
 02. Subscribe and Unsubscribe to the service
+03. Debugger for chrome
+    - download from extentions
+    - view command pallete ` debug open launch.json -> choose: chrome`
+    - change `"url": "http://localhost:8080"` to `"url": "http://localhost:4200"`
+04. Change Detection
+
 
 

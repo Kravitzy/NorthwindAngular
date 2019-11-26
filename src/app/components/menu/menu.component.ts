@@ -14,9 +14,13 @@ export class MenuComponent implements OnInit {
 
     constructor() { }
 
+    ngOnDestroy(): void {
+        this.unsubscribe();
+    }
+
     ngOnInit() {
         this.unsubscribe = store.subscribe( () => 
-            this.totalProducts = store.getState().products.length)
+            this.totalProducts = store.getState().products.length);
     }
 
 }
