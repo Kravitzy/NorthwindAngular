@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit {
         else {
             this.prodService.getAllProductsFromServer()
             .subscribe(products => {
-                alert("products download from server")
+                // alert("products download from server")
                 
                 const action: AnyAction = {
                     type: ActionType.GetAllProducts,

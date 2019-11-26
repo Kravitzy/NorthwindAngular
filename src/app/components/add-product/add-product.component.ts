@@ -25,7 +25,7 @@ export class AddProductComponent {
     //                 err => alert(err.message));
     // }
 
-    public addProduct(): void {
+    public addNewProduct(): void {
         // this.myProductsService.addProductToServer(this.product)
         //     .subscribe(
         //         addedProduct => alert("Succeed Added Product! ID: " + addedProduct.id),
