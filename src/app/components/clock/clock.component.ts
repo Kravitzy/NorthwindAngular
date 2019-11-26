@@ -6,11 +6,11 @@ import { Component, OnInit, DoCheck, ChangeDetectorRef, NgZone } from '@angular/
     styleUrls: ['./clock.component.css']
 })
 export class ClockComponent implements OnInit, DoCheck {
-    
+
     public time: string;
 
     constructor(private changeDetector: ChangeDetectorRef,
-                private ngZone: NgZone) { }
+        private ngZone: NgZone) { }
 
     // works evry time asyncrounes function works
     ngDoCheck(): void {
@@ -21,12 +21,25 @@ export class ClockComponent implements OnInit, DoCheck {
 
     ngOnInit() {
         this.changeDetector.detach();
-        setTimeout( ()=> this.changeDetector.reattach(), 5000);
 
-        setInterval(() => {
-            const d = new Date();
-            this.time = d.toLocaleTimeString();
+        // using changeDetector
+        // setTimeout( ()=> this.changeDetector.reattach(), 5000);
+        // setInterval(() => {
+        //     const d = new Date();
+        //     this.time = d.toLocaleTimeString();
+        // }, 1000);
+
+        // using ngZone
+        this.ngZone.runOutsideAngular(() => {
+            setInterval(() => {
+                const d = new Date();
+                this.time = d.toLocaleTimeString();
+            }, 1000);
+        });
+        setTimeout(() => {
+            this.ngZone.run(()=>{})
         }, 1000);
+
     }
 
     // start engils 2 space then 
