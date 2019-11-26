@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Unsubscribe } from 'redux';
+import { store } from 'src/app/redux/store';
 
 @Component({
     selector: 'app-menu',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+    public totalProducts: number;
+    private unsubscribe: Unsubscribe;
+
     constructor() { }
 
     ngOnInit() {
+        this.unsubscribe = store.subscribe( () => 
+            this.totalProducts = store.getState().products.length)
     }
 
 }

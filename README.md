@@ -90,4 +90,11 @@ command to install angular: use `npm i -g @angular/cli`.
     * `transition: color 1s`
     * `@keyframes RotateAnimation { {from: transform: rotate(0deg)}, to { transform: rotate(360deg)}} `
 
+## Day 06
+01. Redux - 
+    - `npm i redux`
+    - AppState, Store, ActionType, Action, Dispatch, Reducer
+    - `const newObj = { ...objToCopy }` // spread operator - משכפל כל האוביקט לאוביקט חדש
+02. Subscribe and Unsubscribe to the service
+
 
