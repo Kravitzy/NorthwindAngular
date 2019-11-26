@@ -100,7 +100,7 @@ command to install angular: use `npm i -g @angular/cli`.
     - download from extentions
     - view command pallete ` debug open launch.json -> choose: chrome`
     - change `"url": "http://localhost:8080"` to `"url": "http://localhost:4200"`
-04. Change Detection
+04. Change Detection - attach, detach
 05. NgZone
 
 
